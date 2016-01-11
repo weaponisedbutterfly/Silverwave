@@ -12,3 +12,9 @@ User.create!(:email => 'logan@xmen.com', :password => 'genetics')
 User.create!(:email => 'charles@xmen.com', :password => 'professorx')
 User.create!(:email => 'hank@xmen.com', :password => 'thebeast')
 User.create!(:email => 'jean@xmen.com', :password => 'darkphoenix')
+
+Photo.delete_all
+
+Photo.create!(:title => 'The Happy Cat', :description => 'It’s a happy cat what else would a pic called the happy cat be?')
+Photo.create!(:title => 'The Sad Cat', :description => 'It’s a sad cat what else would a pic called the sad cat be?')
+Photo.create!(:title => 'The Curious Cat', :description => 'It’s a curious cat what else would a pic called the curious cat be?')
