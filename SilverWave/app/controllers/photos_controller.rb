@@ -1,10 +1,16 @@
 class PhotosController < ApplicationController
 
-def welcome
+def feed
 end
 
 def index
   @photos = Photo.all
 end
+
+# def show
+# end
+
+
+
 
 end

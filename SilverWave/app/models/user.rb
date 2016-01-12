@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   has_many :friend_requests, foreign_key: "friend_id", class_name: "Friendship"
   has_many :friends, foreign_key: "user_id", class_name: "Friendship"
 
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
 
 end

@@ -1,0 +1,30 @@
+<h1>Silver Wave</h1>
+
+<% if current_user %>
+  <%= current_user.email %>
+  <%= link_to "log out", destroy_user_session_path, method: :delete %>
+ <% else %>
+
+<%= link_to "Sign In", new_user_session_path %>
+<%= link_to "Register", new_user_registration_path %>
+
+<% end %>
+
+<% if current_user %>
+
+<% current_user.photos.each do |photo| %>
+<p><%= photo.title %></p>
+<p><%= photo.description%></p>
+<img width="300" height="200" src="https://www.petfinder.com/wp-content/uploads/2012/11/99233806-bringing-home-new-cat-632x475.jpg" />
+
+<% end %>
+
+
+
+
+
+<% else %>
+<p> Could have some example pictures here.</p>
+<p></p> 
+<p>Not actual user output due to privacy </p>
+<% end %>
