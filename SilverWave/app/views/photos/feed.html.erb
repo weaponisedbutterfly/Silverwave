@@ -18,6 +18,7 @@
 <img width="300" height="200" src="https://www.petfinder.com/wp-content/uploads/2012/11/99233806-bringing-home-new-cat-632x475.jpg" />
 <p><%= link_to 'Show', photo_path(photo) %></p>
 <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
+<p><%= link_to 'Delete Photo', photo_path(photo), method: :delete, data: {confirm: 'Delete? Are your sure?'} %> </p>
 
 <% end %>
 

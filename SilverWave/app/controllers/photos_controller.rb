@@ -17,14 +17,30 @@ def new
 end
 
 def edit
-  current_user.photos.edit(title: params[:photo][:title],
-    description: params[:photo][:description])
-  redirect_to(photos_path)
+  # binding.pry
+  @photo = Photo.find(params[:id])
+
+    # edit title: params[:photo][:title],
+    # description: params[:photo][:description])
+  # redirect_to(photos_path)
 end
 
 def create
   current_user.photos.create(title: params[:photo][:title],
     description: params[:photo][:description])
+  redirect_to(photos_path)
+end
+
+def update
+  @photo = Photo.find(params[:id])
+  @photo.update(title: params[:photo][:title],
+    description: params[:photo][:description])
+  redirect_to(photos_path)
+end
+
+def destroy
+  @photo = Photo.find(params[:id])
+  @photo.destroy 
   redirect_to(photos_path)
 end
 
