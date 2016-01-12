@@ -11,11 +11,13 @@
 <% end %>
 
 <% if current_user %>
-
+<p><%= link_to "Add New Photo", new_photo_path %></p>
 <% current_user.photos.each do |photo| %>
 <p><%= photo.title %></p>
 <p><%= photo.description%></p>
 <img width="300" height="200" src="https://www.petfinder.com/wp-content/uploads/2012/11/99233806-bringing-home-new-cat-632x475.jpg" />
+<p><%= link_to 'Show', photo_path(photo) %></p>
+<p><%= link_to 'Edit', edit_photo_path(photo) %></p>
 
 <% end %>
 
