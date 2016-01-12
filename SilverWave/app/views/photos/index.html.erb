@@ -1,3 +1,17 @@
 <h1>Index</h1>
 
-<button>Sign In</button><button>Register</button>
+<%= link_to "Sign In", new_user_session_path %>
+<%= link_to "Register", new_user_registration_path %>
+
+
+
+
+
+
+<% @photos.each do |photo| %>
+ <p><%= photo.title %></p>
+ <p><%= photo.description%></p>
+ 
+
+ <img width="300" height="200" src="https://www.petfinder.com/wp-content/uploads/2012/11/99233806-bringing-home-new-cat-632x475.jpg" />
+<% end %>
