@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   # devise_for :users
   resources :photos
   devise_for :users
-  
+
   # root to: 'confirmations#new'
-  root to: 'photos#index'
+  # root to: 'photos#index'
+  root to: 'photos#welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
